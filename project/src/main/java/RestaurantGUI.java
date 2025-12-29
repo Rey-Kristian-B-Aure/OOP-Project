@@ -359,7 +359,7 @@ public class RestaurantGUI extends JFrame {
         JPanel quantityPanel = new JPanel(new FlowLayout(FlowLayout.CENTER, 10, 5));
         quantityPanel.setBackground(Color.WHITE);
 
-        JButton btnMinus = new JButton("➖");
+        JButton btnMinus = new JButton("-");
         btnMinus.setFont(new Font("Arial", Font.BOLD, 16));
         btnMinus.setBackground(new Color(255, 200, 200));
         btnMinus.setForeground(Color.BLACK);
@@ -374,7 +374,7 @@ public class RestaurantGUI extends JFrame {
         lblQuantity.setHorizontalAlignment(SwingConstants.CENTER);
         lblQuantity.setBorder(BorderFactory.createLineBorder(Color.GRAY, 1));
         
-        JButton btnPlus = new JButton("➕");
+        JButton btnPlus = new JButton("+");
         btnPlus.setFont(new Font("Arial", Font.BOLD, 16));
         btnPlus.setBackground(new Color(200, 255, 200));
         btnPlus.setForeground(Color.BLACK);
