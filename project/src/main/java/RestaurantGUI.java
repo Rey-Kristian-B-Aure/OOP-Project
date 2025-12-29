@@ -14,6 +14,8 @@ public class RestaurantGUI extends JFrame {
     private DefaultTableModel orderTableModel;
     private JTable orderTable;
     private JLabel lblTotal;
+    private JLabel lblSubtotal;
+    private JLabel lblTax;
     
 
     private JTextArea txtSummary;
@@ -155,12 +157,24 @@ public class RestaurantGUI extends JFrame {
         JScrollPane tableScroll = new JScrollPane(orderTable);
         
 
-        JPanel totalPanel = new JPanel(new FlowLayout(FlowLayout.RIGHT));
+        JPanel totalPanel = new JPanel(new GridLayout(3, 2, 5, 5));
         totalPanel.setBackground(new Color(255, 250, 245));
-        totalPanel.add(new JLabel("TOTAL: "));
+        totalPanel.setBorder(BorderFactory.createEmptyBorder(10, 10, 10, 10));
+        // Subtotal
+        totalPanel.add(new JLabel("Subtotal:", JLabel.RIGHT));
+        lblSubtotal = new JLabel("P0.00");
+        lblSubtotal.setFont(new Font("Arial", Font.PLAIN, 14));
+        totalPanel.add(lblSubtotal);
+        // Tax
+        totalPanel.add(new JLabel("Tax (12%):", JLabel.RIGHT));
+        lblTax = new JLabel("P0.00");
+        lblTax.setFont(new Font("Arial", Font.PLAIN, 14));
+        totalPanel.add(lblTax);
+        // Total
+        totalPanel.add(new JLabel("TOTAL:", JLabel.RIGHT));
         lblTotal = new JLabel("P0.00");
         lblTotal.setFont(new Font("Arial", Font.BOLD, 16));
-        lblTotal.setForeground(new Color(0, 100, 0)); // Green for total
+        lblTotal.setForeground(new Color(0, 100, 0));
         totalPanel.add(lblTotal);
         
         // Buttons panel
@@ -423,6 +437,8 @@ public class RestaurantGUI extends JFrame {
         orderTableModel.setRowCount(0);
         
         if (restaurant.getCurrentOrder() == null) {
+            lblSubtotal.setText("P0.00");
+            lblTax.setText("P0.00");
             lblTotal.setText("P0.00");
             return;
         }
@@ -446,6 +462,8 @@ public class RestaurantGUI extends JFrame {
         }
         
         // Update total label
+        lblSubtotal.setText(String.format("P%.2f", currentOrder.getSubtotal()));
+        lblTax.setText(String.format("P%.2f", currentOrder.getTax()));
         lblTotal.setText(String.format("P%.2f", currentOrder.getTotal()));
     }
     
