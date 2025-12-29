@@ -440,7 +440,7 @@ public class RestaurantGUI extends JFrame {
             Object[] row = {
                 itemName,
                 orderItem.getQuantity(),
-                String.format("P%.2f", item.getPrice())
+                String.format("P%.2f", orderItem.getSubtotal())
             };
             orderTableModel.addRow(row);
         }
