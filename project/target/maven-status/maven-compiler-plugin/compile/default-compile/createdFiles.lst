@@ -1,10 +1,10 @@
 MenuItem.class
 OrderItem.class
+Project.class
+Dessert.class
+RestaurantGUI.class
 RestaurantGUI$1.class
 Beverage.class
-Project.class
 MainDish.class
-Dessert.class
 Order.class
 Restaurant.class
-RestaurantGUI.class
