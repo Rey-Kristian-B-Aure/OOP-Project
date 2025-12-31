@@ -1,0 +1,19 @@
+========================================
+         RESTAURANT RECEIPT
+========================================
+
+Order ID: ORD-1767153596536
+Date: 2025-12-31T12:00:38.723684300
+
+Items Ordered:
+----------------------------------------
+Coke (Medium)                  x1  P   50.00
+Brownies (Low Sugar)           x1  P   95.00
+----------------------------------------
+Subtotal:               P   145.00
+Tax (12%):              P    17.40
+TOTAL:                  P   162.40
+========================================
+
+Thank you for your order!
+Receipt saved to: C:\Users\Admin\Desktop\Downloads\OOP-Project\project\receipts\ORD-1767153596536_20251231_120038.txt

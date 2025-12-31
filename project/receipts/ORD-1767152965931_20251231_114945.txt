@@ -1,0 +1,19 @@
+========================================
+         RESTAURANT RECEIPT
+========================================
+
+Order ID: ORD-1767152965931
+Date: 2025-12-31T11:49:45.429660800
+
+Items Ordered:
+----------------------------------------
+Chicken Curry (Medium)         x1  P  150.00
+Spaghetti Bolognese (Medium)   x2  P  240.00
+----------------------------------------
+Subtotal:               P   390.00
+Tax (12%):              P    46.80
+TOTAL:                  P   436.80
+========================================
+
+Thank you for your order!
+Receipt saved to: C:\Users\Admin\Desktop\Downloads\OOP-Project\project\receipts\ORD-1767152965931_20251231_114945.txt

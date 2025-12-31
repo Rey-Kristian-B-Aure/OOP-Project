@@ -1,5 +1,3 @@
-
-
 import java.util.ArrayList;
 
 public class Restaurant {
@@ -13,26 +11,26 @@ public class Restaurant {
     }
 
     private void loadSampleMenu() {
-        // Main Dishes (5 items)
-        menu.add(new MainDish("M001", "Burger", 125.00));
-        menu.add(new MainDish("M002", "Fried Chicken", 150.00));
-        menu.add(new MainDish("M003", "Spaghetti", 120.00));
-        menu.add(new MainDish("M004", "Pizza", 180.00));
-        menu.add(new MainDish("M005", "Steak", 250.00));
+        // Main Dishes with different spice levels
+        menu.add(new MainDish("M001", "Chicken Curry", 150.00, "Spicy"));
+        menu.add(new MainDish("M002", "Spaghetti Bolognese", 120.00, "Medium"));
+        menu.add(new MainDish("M003", "Beef Stir Fry", 140.00, "Spicy"));
+        menu.add(new MainDish("M004", "Chicken Alfredo", 130.00, "Mild"));
+        menu.add(new MainDish("M005", "Vegetable Curry", 110.00, "Medium"));
 
-        // Beverages (5 items with sizes)
-        menu.add(new Beverage("B001", "Coke", 40.00, "Small"));
-        menu.add(new Beverage("B002", "Coke", 50.00, "Medium"));
-        menu.add(new Beverage("B003", "Coke", 60.00, "Large"));
-        menu.add(new Beverage("B004", "Iced Tea", 35.00, "Small"));
-        menu.add(new Beverage("B005", "Iced Tea", 45.00, "Large"));
+        // Beverages - 5 unique items with base prices
+        menu.add(new Beverage("B001", "Coke", 40.00, "Medium"));
+        menu.add(new Beverage("B002", "Sprite", 40.00, "Medium"));
+        menu.add(new Beverage("B003", "Iced Tea", 35.00, "Medium"));
+        menu.add(new Beverage("B004", "Blue Lemonade", 45.00, "Medium"));
+        menu.add(new Beverage("B005", "Pineapple Juice", 42.00, "Medium"));
 
-        // Desserts (5 items)
-        menu.add(new Dessert("D001", "Ice Cream", 100.00));
-        menu.add(new Dessert("D002", "Chocolate Cake", 120.00));
-        menu.add(new Dessert("D003", "Fruit Salad", 80.00));
-        menu.add(new Dessert("D004", "Leche Flan", 90.00));
-        menu.add(new Dessert("D005", "Brownies", 110.00));
+        // Desserts with different sugar levels
+        menu.add(new Dessert("D001", "Chocolate Cake", 100.00, "Normal"));
+        menu.add(new Dessert("D002", "Cheesecake", 120.00, "Low"));
+        menu.add(new Dessert("D003", "Ice Cream Sundae", 90.00, "Extra"));
+        menu.add(new Dessert("D004", "Fruit Tart", 85.00, "Normal"));
+        menu.add(new Dessert("D005", "Brownies", 95.00, "Extra"));
     }
 
     public ArrayList<MenuItem> getMenuByCategory(String category) {
